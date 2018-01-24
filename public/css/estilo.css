@@ -1,0 +1,84 @@
+html {
+	background-color: black;
+}
+
+.container {
+	width: 100% !important;
+	max-width: 9999px !important;
+}
+
+/* logo */ 
+.avalith {
+  width: 35px;
+  height: 39px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+nav {
+	height: 60px;
+	background-color: black !important;
+}
+
+/* dev name, etc */
+.gray-box {
+	background-color: #444444;
+	height: 135px;
+	text-align: center;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.results {
+	background-color: lightgray;
+	height: 100%;
+	position: absolute;
+}
+
+.lwhite {
+	color: white !important;
+}
+
+.label-top {
+	margin-top: 21px;
+	font-size: 25px;
+}
+
+.label-mid {
+	font-size: 19px;
+}
+
+.label-bot {
+	margin-bottom: 32px;
+	font-size: 19px;
+}
+
+input, select, textarea{
+    color: white !important;
+}
+
+.mar-left-search {
+	margin-left: 30px;
+}
+
+.row .col {
+	padding: 0rem !important;
+}
+
+.input-mar {
+	padding-left: 30px;
+	margin-right: 30px;
+}
+
+div {
+    overflow-x: hidden;
+}
+
+h5 {
+	padding-left: 31px;
+	padding-top: 30px;
+}
+
+label, h5 {
+    font-weight: 300 !important;
+}
