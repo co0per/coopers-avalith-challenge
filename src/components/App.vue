@@ -2,7 +2,7 @@
     <div class="app">
       <top-menu></top-menu>
       <transition name="fade">
-        <viewHome></viewHome>
+        <viewHome moveSidevar="display_or_not"></viewHome>
       </transition>
     </div>
 </template>
@@ -19,9 +19,18 @@
       },
       data() {
           return {
-
+            display_or_not: true
           }
       },
+      methods: {
+        display_sidebar() {
+          if (this.display_or_not) {
+            this.display_or_not = false;
+          } else {
+            this.display_or_not = true;
+          }
+        }
+      }
     }
 </script>
 

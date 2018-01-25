@@ -1,5 +1,5 @@
 html {
-	background-color: black;
+	background-color: #d4d4d4;
 }
 
 .container {
@@ -29,9 +29,11 @@ nav {
 	padding-top: 20px;
 }
 
-.results {
+/* languages and technologies */
+.results { 
 	background-color: lightgray;
 	height: 100%;
+	width: 100%;
 	position: absolute;
 }
 
@@ -93,3 +95,16 @@ label, h5 {
   display: flex;
   flex-wrap: wrap;
 }
+
+/*
+
+@media screen and (max-width: 1242px) and (min-width: 1192px) {
+  img {
+    max-width: 250px !important;
+  }
+}
+
+position absolute 
+height 100%
+
+*/

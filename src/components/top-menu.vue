@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <div class="">
-      <img src='https://i.imgur.com/wdg9JSv.png' class="avalith">  
-    </div>
+    <a href="#">
+      <img src='https://i.imgur.com/wdg9JSv.png' class="avalith" @click="display_sidebar">  
+    </a>
   </nav>
 </template>
 
@@ -21,7 +21,9 @@
 
         },
         methods: {
-
+            display_sidebar(){
+                this.$emit('display_side');
+            }
         },
         computed: {
 
