@@ -1,8 +1,7 @@
 <template>
     <div class="app">
-      <top-menu></top-menu>
       <transition name="fade">
-        <viewHome moveSidevar="display_or_not"></viewHome>
+        <viewHome :displaySidebar="displaySidebar"></viewHome>
       </transition>
     </div>
 </template>
@@ -19,15 +18,16 @@
       },
       data() {
           return {
-            display_or_not: true
+            displaySidebar: true
           }
       },
       methods: {
-        display_sidebar() {
-          if (this.display_or_not) {
-            this.display_or_not = false;
+        displaySidebar(bool) {
+          console.log("llega hasta aca????");
+          if (this.displaySidebar) {
+            this.displaySidebar = false;
           } else {
-            this.display_or_not = true;
+            this.displaySidebar = true;
           }
         }
       }

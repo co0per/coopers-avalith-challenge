@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <nav>
+      <a href="#">
+        <img src='https://i.imgur.com/wdg9JSv.png' class="avalith" @click="displaySidebar">  
+      </a>
+    </nav>
     <div class="row">
       <div class="">
         <div class="gray-box">
@@ -43,6 +48,9 @@
           </div>
         </div>
       </div>
+
+      <div v-if="displaySidebar"><h4>a ver que pasa a a a</h4></div>
+
     </div>
   </div>
 </template>
@@ -53,8 +61,9 @@
 
   export default {
     name: 'viewHome',
-    props: [],
-    components:{
+    props: ['displaySidebar'],
+    components: {
+
     }, 
     data() { 
       return {
@@ -85,6 +94,10 @@
         }
 
         return lt_list;
+      },
+
+      logo_thingy() {
+        console.log(this.displaySidebar);
       }
     }
   }
