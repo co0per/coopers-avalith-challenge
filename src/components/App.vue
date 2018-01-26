@@ -7,13 +7,11 @@
 </template>
 
 <script>
-  import topMenu from './top-menu.vue';
   import viewHome from './viewHome.vue';
 
     export default {
       name: 'app',
       components: {
-        topMenu,
         viewHome
       },
       data() {
