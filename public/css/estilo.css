@@ -18,6 +18,7 @@ html {
 nav {
 	height: 60px;
 	background-color: black !important;
+	position: fixed;
 }
 
 /* dev name, etc */
@@ -32,9 +33,26 @@ nav {
 /* languages and technologies */
 .results { 
 	background-color: lightgray;
-	height: 100%;
+	height: -webkit-calc(100% - 60px);
+	margin-top: 60px;
 	width: 100%;
-	position: absolute;
+	padding-left: 330px;
+}
+
+.sideBar {
+    height: -webkit-calc(100% - 60px);
+    margin-top: 60px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: black; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#main {
+    transition: margin-left .5s;
 }
 
 .lwhite {
@@ -87,7 +105,7 @@ label, h5 {
 
 .card.small {
     height: 100% !important;
-    margin-left: 25px;
+    margin-left: 15px;
     max-width: 325px;
 }
 
@@ -95,16 +113,3 @@ label, h5 {
   display: flex;
   flex-wrap: wrap;
 }
-
-/*
-
-@media screen and (max-width: 1242px) and (min-width: 1192px) {
-  img {
-    max-width: 250px !important;
-  }
-}
-
-position absolute 
-height 100%
-
-*/

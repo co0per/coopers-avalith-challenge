@@ -1,48 +1,47 @@
 <template>
     <div class="app">
-      <transition name="fade">
-        <viewHome :displaySidebar="displaySidebar"></viewHome>
-      </transition>
+      <navbar @displayNavbar="display_navbar(true)"></navbar>
+      <sidebar @updateListInput="update_list_input"  
+               @updateListRadio="update_list_radio" 
+               :display='display'>           
+      </sidebar>
+      <results :display='display' :searchFilter='searchFilter' :radioFilter='radioFilter'></results>
     </div>
 </template>
 
 <script>
-  import viewHome from './viewHome.vue';
+  import results from './results.vue';
+  import navbar from './navbar.vue';
+  import sidebar from './sidebar.vue';
 
     export default {
       name: 'app',
       components: {
-        viewHome
+        navbar,
+        sidebar,
+        results
       },
       data() {
           return {
-            displaySidebar: true
+            display: false,
+            searchFilter: '',
+            radioFilter: ''
           }
       },
       methods: {
-        displaySidebar(bool) {
-          console.log("llega hasta aca????");
-          if (this.displaySidebar) {
-            this.displaySidebar = false;
+        display_navbar(bool) {
+          if(!this.display){
+            this.display = true;
           } else {
-            this.displaySidebar = true;
+            this.display = false;
           }
+        },
+        update_list_input(search_filter) {
+          this.searchFilter = search_filter;
+        },
+        update_list_radio(radio_filter) {
+          this.radioFilter = radio_filter;
         }
       }
     }
 </script>
-
-<style>
-  .fade-enter-active, .fade-leave-active {
-    transition-property: opacity;
-    transition-duration: .25s;
-  }
-
-  .fade-enter-active {
-    transition-delay: .25s;
-  }
-
-  .fade-enter, .fade-leave-active {
-    opacity: 0
-  }
-</style>
